@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Patient Registration Form</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial;
+        }
+
+        body{
+            background:#dff5ff;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            padding:40px;
+        }
+
+        .container{
+            background:white;
+            width:700px;
+            padding:25px 40px;
+            border-radius:8px;
+            box-shadow:0 0 10px rgba(0,0,0,0.2);
+        }
+
+        h2{
+            text-align:center;
+            margin-bottom:20px;
+            color:#0077b6;
+        }
+
+        form{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:15px 30px;
+        }
+
+        .full{
+            grid-column:1/3;
+        }
+
+        label{
+            font-weight:bold;
+        }
+
+        input,select,textarea{
+            width:100%;
+            padding:10px;
+            border:1px solid #bbb;
+            border-radius:4px;
+            margin-top:5px;
+            font-size:15px;
+        }
+
+        textarea{
+            height:70px;
+            resize:none;
+        }
+
+        button{
+            grid-column:1/3;
+            padding:13px;
+            background:#0077b6;
+            color:white;
+            font-size:18px;
+            border:none;
+            border-radius:4px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#023e8a;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <h2>Hospital Patient Registration Form</h2>
+
+        <form action="patients" method="post">
+
+    <div>
+        <label>First Name</label>
+        <input type="text" name="fname" required>
+    </div>
+
+    <div>
+        <label>Last Name</label>
+        <input type="text" name="lname" required>
+    </div>
+
+    <div>
+        <label>Age</label>
+        <input type="number" name="age" required>
+    </div>
+
+    <div>
+        <label>Gender</label>
+        <select name="gender" required>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+        </select>
+    </div>
+
+    <div>
+        <label>Date of Birth</label>
+        <input type="date" name="dob" required>
+    </div>
+
+    <div>
+        <label>Contact Number</label>
+        <input type="tel" name="phone" required>
+    </div>
+
+    <div class="full">
+        <label>Email</label>
+        <input type="email" name="email" required>
+    </div>
+
+    <div class="full">
+        <label>Address</label>
+        <textarea name="address" required></textarea>
+    </div>
+
+    <div>
+        <label>City</label>
+        <input type="text" name="city" required>
+    </div>
+
+    <div>
+        <label>State</label>
+        <input type="text" name="state" required>
+    </div>
+
+    <div>
+        <label>Pincode</label>
+        <input type="number" name="pin" required>
+    </div>
+
+    <div>
+        <label>Blood Group</label>
+        <select name="blood">
+            <option>A+</option><option>A-</option>
+            <option>B+</option><option>B-</option>
+            <option>AB+</option><option>AB-</option>
+            <option>O+</option><option>O-</option>
+        </select>
+    </div>
+
+    <div class="full">
+        <label>Medical History</label>
+        <textarea name="history"></textarea>
+    </div>
+
+    <div>
+        <label>Doctor Assigned</label>
+        <input type="text" name="doctor">
+    </div>
+
+    <div>
+        <label>Admission Date</label>
+        <input type="date" name="admit_date">
+    </div>
+
+    <button type="submit">Register Patient</button>
+
+</form>
+
+
+    </div>
+
+</body>
+</html>
